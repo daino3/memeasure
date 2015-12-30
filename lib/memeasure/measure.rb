@@ -1,4 +1,4 @@
-class Measure
+module MeMeasure
   extend self
 
   def run(options = {gc: :enable})
