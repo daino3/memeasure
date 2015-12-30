@@ -15,7 +15,7 @@ module MeMeasure
       yield
     end
 
-    gc_start_after = GC.stat
+    gc_stat_after = GC.stat
     GC.start if options[:gc] == :enable
 
     memory_after = `ps -o rss= -p #{Process.pid}`.to_i / 1024
@@ -23,8 +23,8 @@ module MeMeasure
     puts({
       RUBY_VERSION => {
         gc: options[:gc],
-        time: time.round(2),
-        gc_acount: gc_state_after[:count].to_i - gc_stat_before[:count].to_i,
+        time: time.total.round(2),
+        gc_acount: gc_stat_after[:count].to_i - gc_stat_before[:count].to_i,
         memory: "%d MB" % (memory_after - memory_before)
       }
     }.to_json)
