@@ -13,7 +13,7 @@ Say you have the following code:
 
 class Person
   def name
-    1000.times { "x" * 1024 * 1024 * 10 # A 10 MB string }
+    1000.times { "x" * 1024 * 1024 * 10 } # A 10 MB string
   end
 end
 ```
@@ -28,7 +28,7 @@ class Person
 
   def name
     Measure.run do
-      1000.times { "x" * 1024 * 1024 * 10 # A 10 MB string }
+      1000.times { "x" * 1024 * 1024 * 10 }
     end
   end
 end
