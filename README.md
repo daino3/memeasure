@@ -40,3 +40,9 @@ Jumping into a rails/irb console, loading this file, and running `Person.new.nam
 ```
 {"2.2.0": {"gc": "enable", "time": 2.1, "gc_count": 10, "memory": "525 MB"}}
 ```
+
+### Release instructions
+
+1. Bump version in lib/memeasure.rb
+2. gem build memeasure.gemspec
+3. gem push memeasure-<NEW_VERSION_HERE>.gem
