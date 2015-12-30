@@ -24,7 +24,7 @@ module MeMeasure
       RUBY_VERSION => {
         gc: options[:gc],
         time: time.total.round(2),
-        gc_acount: gc_stat_after[:count].to_i - gc_stat_before[:count].to_i,
+        gc_count: gc_stat_after[:count].to_i - gc_stat_before[:count].to_i,
         memory: "%d MB" % (memory_after - memory_before)
       }
     }.to_json)
