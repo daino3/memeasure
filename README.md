@@ -37,8 +37,10 @@ end
 
 Jumping into a rails/irb console, loading this file, and running `Person.new.name` will generate the output in a similar format to:
 
-```
-{"2.2.0": {"gc": "enable", "time": 2.1, "gc_count": 10, "memory": "525 MB"}}
+```ruby
+Person.new.name
+
+# {"2.2.0": {"gc": "enable", "time": 2.1, "gc_count": 10, "memory": "525 MB"}}
 ```
 
 ### Release instructions
