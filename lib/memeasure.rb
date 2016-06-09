@@ -1,3 +1,5 @@
+require 'benchmark'
+require 'json'
 require 'memeasure/measure'
 
 module MeMeasure

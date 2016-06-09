@@ -27,7 +27,7 @@ require 'memeasure'
 class Person
 
   def name
-    Measure.run do
+    MeMeasure.run do
       1000.times { "x" * 1024 * 1024 * 10 }
     end
   end

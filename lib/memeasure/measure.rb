@@ -11,7 +11,7 @@ module MeMeasure
     memory_before = `ps -o rss= -p #{Process.pid}`.to_i / 1024
     gc_stat_before = GC.stat
 
-    time = Benchmark.measure do
+    time = ::Benchmark.measure do
       yield
     end
 
